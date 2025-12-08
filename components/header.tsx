@@ -42,11 +42,15 @@ export function Header() {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              <User className="w-4 h-4 mr-2" />
-              로그인
-            </Button>
-            <Button size="sm">예약하기</Button>
+            <Link href="/mypage">
+              <Button variant="ghost" size="sm">
+                <User className="w-4 h-4 mr-2" />
+                마이페이지
+              </Button>
+            </Link>
+            <Link href="#reservation">
+              <Button size="sm">예약하기</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,12 +74,16 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex gap-3 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="flex-1">
-                  로그인
-                </Button>
-                <Button size="sm" className="flex-1">
-                  예약하기
-                </Button>
+                <Link href="/mypage" className="flex-1">
+                  <Button variant="ghost" size="sm" className="w-full">
+                    마이페이지
+                  </Button>
+                </Link>
+                <Link href="#reservation" className="flex-1">
+                  <Button size="sm" className="w-full">
+                    예약하기
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
