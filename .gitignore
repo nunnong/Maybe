@@ -4,6 +4,7 @@ node_modules/
 # Next.js
 .next/
 out/
+next-env.d.ts
 
 # Build artifacts
 dist/
@@ -25,3 +26,5 @@ pnpm-debug.log*
 
 # OS
 .DS_Store
+
+node_modules

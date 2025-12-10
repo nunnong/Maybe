@@ -10,7 +10,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 import {
   Heart,
-  Home,
   Calendar,
   CreditCard,
   User,
@@ -121,7 +120,7 @@ const statusStyles: Record<string, { bg: string; text: string; icon: React.React
 }
 
 export function MyPageDashboard() {
-  const [activeTab, setActiveTab] = useState("overview")
+  const [activeTab, setActiveTab] = useState("dating")
 
   return (
     <div className="min-h-screen bg-muted/30">
@@ -165,15 +164,7 @@ export function MyPageDashboard() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-border space-y-2">
-                  <button
-                    onClick={() => setActiveTab("overview")}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                      activeTab === "overview" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
-                    }`}
-                  >
-                    <Home className="w-4 h-4" />
-                    대시보드
-                  </button>
+
                   <button
                     onClick={() => setActiveTab("dating")}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
@@ -226,52 +217,7 @@ export function MyPageDashboard() {
 
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-6">
-            {/* Overview Tab */}
-            {activeTab === "overview" && (
-              <>
-                {/* Stats Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card>
-                    <CardContent className="pt-6">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-muted-foreground">소개팅 신청</p>
-                          <p className="text-2xl font-bold text-foreground">3건</p>
-                        </div>
-                        <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
-                          <Heart className="w-6 h-6 text-pink-600" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="pt-6">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-muted-foreground">펜션 예약</p>
-                          <p className="text-2xl font-bold text-foreground">2건</p>
-                        </div>
-                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                          <Calendar className="w-6 h-6 text-blue-600" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="pt-6">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-muted-foreground">총 결제금액</p>
-                          <p className="text-2xl font-bold text-foreground">680,000원</p>
-                        </div>
-                        <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                          <CreditCard className="w-6 h-6 text-green-600" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
+            
                 {/* Recent Dating Applications */}
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between">
@@ -342,8 +288,6 @@ export function MyPageDashboard() {
                     </div>
                   </CardContent>
                 </Card>
-              </>
-            )}
 
             {/* Dating Applications Tab */}
             {activeTab === "dating" && (
@@ -399,14 +343,7 @@ export function MyPageDashboard() {
                         {/* Match Info (if available) */}
                         {app.matchInfo && (
                           <div className="bg-primary/5 rounded-lg p-4 mb-4">
-                            <h4 className="font-medium text-foreground mb-2">매칭 정보</h4>
                             <div className="grid grid-cols-3 gap-4 text-sm">
-                              <div>
-                                <p className="text-muted-foreground">상대방</p>
-                                <p className="font-medium">
-                                  {app.matchInfo.name} ({app.matchInfo.age}세)
-                                </p>
-                              </div>
                               <div>
                                 <p className="text-muted-foreground">소개팅 날짜</p>
                                 <p className="font-medium">{app.matchInfo.matchDate}</p>
