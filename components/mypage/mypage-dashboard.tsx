@@ -219,7 +219,7 @@ export function MyPageDashboard() {
           <div className="lg:col-span-3 space-y-6">
             
                 {/* Recent Dating Applications */}
-                <Card>
+                {/* <Card>
                   <CardHeader className="flex flex-row items-center justify-between">
                     <CardTitle className="text-lg">최근 소개팅 신청</CardTitle>
                     <Button variant="ghost" size="sm" onClick={() => setActiveTab("dating")}>
@@ -250,10 +250,10 @@ export function MyPageDashboard() {
                       ))}
                     </div>
                   </CardContent>
-                </Card>
+                </Card> */}
 
                 {/* Recent Pension Reservations */}
-                <Card>
+                {/* <Card>
                   <CardHeader className="flex flex-row items-center justify-between">
                     <CardTitle className="text-lg">최근 펜션 예약</CardTitle>
                     <Button variant="ghost" size="sm" onClick={() => setActiveTab("pension")}>
@@ -287,7 +287,7 @@ export function MyPageDashboard() {
                       ))}
                     </div>
                   </CardContent>
-                </Card>
+                </Card> */}
 
             {/* Dating Applications Tab */}
             {activeTab === "dating" && (
