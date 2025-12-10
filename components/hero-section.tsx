@@ -46,6 +46,7 @@ export function HeroSection() {
             프로그램 알아보기
           </Button>
         </div>
+
       </div>
 
       {/* Scroll Indicator */}
