@@ -318,8 +318,8 @@ export function MyPageDashboard() {
                             <span>신청접수</span>
                             <span>검토중</span>
                             <span>승인완료</span>
-                            <span>결제</span>
-                            <span>매칭</span>
+                            <span>결제대기</span>
+                            <span>결제완료</span>
                           </div>
                           <div className="h-2 bg-muted rounded-full overflow-hidden">
                             <div
@@ -571,17 +571,6 @@ export function MyPageDashboard() {
                   <CardTitle>설정</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="flex items-center justify-between p-4 border border-border rounded-lg">
-                    <div>
-                      <h4 className="font-medium text-foreground">알림 설정</h4>
-                      <p className="text-sm text-muted-foreground">이메일 및 SMS 알림을 받습니다</p>
-                    </div>
-                    <label className="relative inline-flex items-center cursor-pointer">
-                      <input type="checkbox" defaultChecked className="sr-only peer" />
-                      <div className="w-11 h-6 bg-muted peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-                    </label>
-                  </div>
-
                   <div className="flex items-center justify-between p-4 border border-border rounded-lg">
                     <div>
                       <h4 className="font-medium text-foreground">마케팅 수신 동의</h4>
