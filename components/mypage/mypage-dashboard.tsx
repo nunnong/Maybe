@@ -130,7 +130,7 @@ export function MyPageDashboard() {
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2">
               <Heart className="w-8 h-8 text-primary fill-primary" />
-              <span className="text-xl font-bold text-foreground">바다愛</span>
+              <span className="text-xl font-bold text-foreground">Ocean-date</span>
             </Link>
             <div className="flex items-center gap-4">
               <Link href="/">
@@ -350,7 +350,7 @@ export function MyPageDashboard() {
                               </div>
                               <div>
                                 <p className="text-muted-foreground">장소</p>
-                                <p className="font-medium">바다愛 펜션</p>
+                                <p className="font-medium">Ocean-date 펜션</p>
                               </div>
                             </div>
                           </div>

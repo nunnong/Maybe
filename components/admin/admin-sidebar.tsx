@@ -22,7 +22,7 @@ export function AdminSidebar({ activeTab, setActiveTab }: AdminSidebarProps) {
       <div className="p-6">
         <Link href="/" className="flex items-center gap-2">
           <Heart className="w-8 h-8 text-primary fill-primary" />
-          <span className="text-xl font-bold text-foreground">바다愛</span>
+          <span className="text-xl font-bold text-foreground">Ocean-date</span>
         </Link>
         <p className="text-xs text-muted-foreground mt-1">관리자 페이지</p>
       </div>

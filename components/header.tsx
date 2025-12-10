@@ -10,7 +10,6 @@ const navItems = [
   { label: "프로그램", href: "#program" },
   { label: "펜션", href: "#pension" },
   { label: "예약", href: "#reservation" },
-  { label: "요금", href: "#pricing" },
   { label: "문의", href: "#inquiry" },
 ]
 
@@ -24,7 +23,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Heart className="w-8 h-8 text-primary fill-primary" />
-            <span className="text-xl font-bold text-foreground">바다愛</span>
+            <span className="text-xl font-bold text-foreground">Ocean-date</span>
           </Link>
 
           {/* Desktop Navigation */}

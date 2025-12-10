@@ -26,7 +26,7 @@ export function AdminOverview() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-foreground">대시보드</h1>
-        <p className="text-muted-foreground">바다愛 운영 현황을 한눈에 확인하세요.</p>
+        <p className="text-muted-foreground">Ocean-date 운영 현황을 한눈에 확인하세요.</p>
       </div>
 
       {/* Stats Grid */}

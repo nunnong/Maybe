@@ -30,9 +30,9 @@ export function AboutSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-wider uppercase">About Us</span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foreground text-balance">바다愛를 소개합니다</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foreground text-balance">Ocean-date를 소개합니다</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-pretty">
-            바다愛는 20-30대를 위한 프리미엄 소개팅 프로그램입니다. 아름다운 강원도 삼척 용화해변의 펜션에서 1박 2일
+            Ocean-date는 20-30대를 위한 프리미엄 소개팅 프로그램입니다. 아름다운 강원도 삼척 용화해변의 펜션에서 1박 2일
             동안 특별한 인연을 만나보세요.
           </p>
         </div>

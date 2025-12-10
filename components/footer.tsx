@@ -10,7 +10,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Heart className="w-8 h-8 text-accent fill-accent" />
-              <span className="text-xl font-bold">바다愛</span>
+              <span className="text-xl font-bold">Ocean-date</span>
             </Link>
             <p className="text-background/70 text-sm mb-4 max-w-md">
               강원도 삼척 용화해변에서 펜션 숙박과 4:4 소개팅을 동시에! 1박 2일 특별한 연애 프로그램으로 인연을
@@ -96,7 +96,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-background/10 text-center text-sm text-background/50">
-          <p>© 2025 바다愛. All rights reserved.</p>
+          <p>© 2025 Ocean-date. All rights reserved.</p>
           <p className="mt-2">
             사업자등록번호: 123-45-67890 | 대표: 홍길동 | 주소: 강원도 삼척시 근덕면 용화해변길 123
           </p>

@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Ocean/romantic theme for 바다愛 service */
+/* Ocean/romantic theme for Ocean-date service */
 :root {
   --background: oklch(0.98 0.005 220);
   --foreground: oklch(0.2 0.02 240);

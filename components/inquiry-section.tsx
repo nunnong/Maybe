@@ -91,7 +91,7 @@ export function InquirySection() {
                   </div>
                   <div className="bg-muted rounded-2xl rounded-tl-none px-4 py-2 max-w-[80%]">
                     <p className="text-sm text-foreground">
-                      안녕하세요! 바다愛입니다. 😊
+              안녕하세요! Ocean-date입니다. 😊
                       <br />
                       무엇을 도와드릴까요?
                     </p>
