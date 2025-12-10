@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/about-section"
 import { ProgramSection } from "@/components/program-section"
 import { PensionSection } from "@/components/pension-section"
 import { ReservationSection } from "@/components/reservation-section"
-import { PricingSection } from "@/components/pricing-section"
 import { InquirySection } from "@/components/inquiry-section"
 import { Footer } from "@/components/footer"
 
@@ -17,7 +16,6 @@ export default function Home() {
       <ProgramSection />
       <PensionSection />
       <ReservationSection />
-      <PricingSection />
       <InquirySection />
       <Footer />
     </main>

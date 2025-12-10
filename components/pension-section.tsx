@@ -1,5 +1,4 @@
 import { Wifi, Car, Utensils, Wind, Tv, Bath } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const rooms = [
   {
@@ -70,10 +69,6 @@ export function PensionSection() {
                       {feature}
                     </span>
                   ))}
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-bold text-primary">{room.price}</span>
-                  <Button size="sm">예약하기</Button>
                 </div>
               </div>
             </div>

@@ -46,22 +46,6 @@ export function HeroSection() {
             프로그램 알아보기
           </Button>
         </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20">
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold">500+</div>
-            <div className="text-sm text-primary-foreground/70">성공 커플</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold">98%</div>
-            <div className="text-sm text-primary-foreground/70">만족도</div>
-          </div>
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold">3년</div>
-            <div className="text-sm text-primary-foreground/70">운영 경력</div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
