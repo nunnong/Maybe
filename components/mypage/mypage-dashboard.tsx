@@ -318,7 +318,7 @@ export function MyPageDashboard() {
                             <span>신청접수</span>
                             <span>검토중</span>
                             <span>승인완료</span>
-                            <span>결제대기</span>
+                            <span>참가확정</span>
                             <span>결제완료</span>
                           </div>
                           <div className="h-2 bg-muted rounded-full overflow-hidden">
@@ -332,7 +332,7 @@ export function MyPageDashboard() {
                                       ? "30%"
                                       : app.status === "승인완료"
                                         ? "50%"
-                                        : app.status === "결제대기"
+                                        : app.status === "참가확정"
                                           ? "70%"
                                           : "100%",
                               }}
