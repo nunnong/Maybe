@@ -113,9 +113,9 @@ const paymentHistory = [
 
 const statusStyles: Record<string, { bg: string; text: string; icon: React.ReactNode }> = {
   신청접수: { bg: "bg-muted", text: "text-muted-foreground", icon: <Clock className="w-3 h-3" /> },
-  검토중: { bg: "bg-amber-100", text: "text-amber-700", icon: <Loader2 className="w-3 h-3 animate-spin" /> },
+  검토중: { bg: "bg-amber-100", text: "text-amber-700", icon: <Loader2 className="w-3 h-3" /> },
   승인완료: { bg: "bg-blue-100", text: "text-blue-700", icon: <CheckCircle2 className="w-3 h-3" /> },
-  결제대기: { bg: "bg-orange-100", text: "text-orange-700", icon: <AlertCircle className="w-3 h-3" /> },
+  참가확정: { bg: "bg-orange-100", text: "text-orange-700", icon: <AlertCircle className="w-3 h-3" /> },
   결제완료: { bg: "bg-green-100", text: "text-green-700", icon: <CheckCircle2 className="w-3 h-3" /> },
 }
 
@@ -218,77 +218,6 @@ export function MyPageDashboard() {
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-6">
             
-                {/* Recent Dating Applications */}
-                {/* <Card>
-                  <CardHeader className="flex flex-row items-center justify-between">
-                    <CardTitle className="text-lg">최근 소개팅 신청</CardTitle>
-                    <Button variant="ghost" size="sm" onClick={() => setActiveTab("dating")}>
-                      전체보기
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {datingApplications.slice(0, 2).map((app) => (
-                        <div key={app.id} className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                          <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                              <Heart className="w-5 h-5 text-primary" />
-                            </div>
-                            <div>
-                              <p className="font-medium text-foreground">{app.month} 프로그램</p>
-                              <p className="text-sm text-muted-foreground">신청일: {app.appliedAt}</p>
-                            </div>
-                          </div>
-                          <Badge
-                            className={`${statusStyles[app.status]?.bg} ${statusStyles[app.status]?.text} border-0`}
-                          >
-                            {statusStyles[app.status]?.icon}
-                            <span className="ml-1">{app.status}</span>
-                          </Badge>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card> */}
-
-                {/* Recent Pension Reservations */}
-                {/* <Card>
-                  <CardHeader className="flex flex-row items-center justify-between">
-                    <CardTitle className="text-lg">최근 펜션 예약</CardTitle>
-                    <Button variant="ghost" size="sm" onClick={() => setActiveTab("pension")}>
-                      전체보기
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {pensionReservations.slice(0, 2).map((res) => (
-                        <div key={res.id} className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                          <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                              <MapPin className="w-5 h-5 text-blue-600" />
-                            </div>
-                            <div>
-                              <p className="font-medium text-foreground">{res.roomType}</p>
-                              <p className="text-sm text-muted-foreground">
-                                {res.checkIn} ~ {res.checkOut} ({res.guests}인)
-                              </p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <p className="font-bold text-foreground">{res.amount.toLocaleString()}원</p>
-                            <Badge className="bg-green-100 text-green-700 border-0">
-                              <CheckCircle2 className="w-3 h-3 mr-1" />
-                              {res.status}
-                            </Badge>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card> */}
-
             {/* Dating Applications Tab */}
             {activeTab === "dating" && (
               <Card>
