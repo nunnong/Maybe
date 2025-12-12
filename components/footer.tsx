@@ -58,11 +58,6 @@ export function Footer() {
                   예약
                 </Link>
               </li>
-              <li>
-                <Link href="#pricing" className="hover:text-background transition-colors">
-                  요금
-                </Link>
-              </li>
             </ul>
           </div>
 
