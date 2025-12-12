@@ -6,6 +6,7 @@ import { DatingApplications } from "./dating-applications"
 import { PensionReservations } from "./pension-reservations"
 import { AdminOverview } from "./admin-overview"
 import { AdminInquiries } from "./admin-inquiries"
+import { ProgramManagement } from "./program-section"
 
 export function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("overview")
@@ -18,6 +19,7 @@ export function AdminDashboard() {
           {activeTab === "overview" && <AdminOverview />}
           {activeTab === "dating" && <DatingApplications />}
           {activeTab === "pension" && <PensionReservations />}
+          {activeTab === "program" && <ProgramManagement />}
           {activeTab === "inquiries" && <AdminInquiries />}
         </main>
       </div>
