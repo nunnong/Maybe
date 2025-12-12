@@ -31,3 +31,8 @@ jobs:
               {
                 \"color\": \"#34A853\",
                 \"title\": \"Frontend Push\",
+                \"text\": \"${MESSAGE}\"
+              }
+            ]
+          }" \
+          https://meeting.ssafy.com/hooks/3yhmy8s3ptbb5pq6egcb4z5bfa
