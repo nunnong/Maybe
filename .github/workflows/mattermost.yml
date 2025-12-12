@@ -1,4 +1,4 @@
-name: Mattermost Frontend Push Notify (Modern Card)
+name: Mattermost Frontend Push Notify (Slack Style)
 
 on:
   push:
@@ -12,26 +12,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build commit section
+      # Build commit list for this push
+      - name: Build pushed commit list
         run: |
           git fetch --depth=100
-          COMMITS=$(git log --pretty=format:"%h  %s" ${{ github.event.before }}..${{ github.sha }} | sed ':a;N;$!ba;s/\n/\\n/g')
-          echo "COMMITS=$COMMITS" >> $GITHUB_ENV
+          COMMIT_LIST=$(git log --pretty=format:"• %h %s" ${{ github.event.before }}..${{ github.sha }} | sed ':a;N;$!ba;s/\n/\\n/g')
+          echo "COMMIT_LIST=$COMMIT_LIST" >> $GITHUB_ENV
 
           COMPARE_URL="https://github.com/${GITHUB_REPOSITORY}/compare/${GITHUB_EVENT_BEFORE}...${GITHUB_SHA}"
           echo "COMPARE_URL=$COMPARE_URL" >> $GITHUB_ENV
 
-      - name: Send modern card to Mattermost
+      # Send Slack-style message to Mattermost
+      - name: Send notification to Mattermost
         run: |
-          MESSAGE="FRONT • ${GITHUB_REF_NAME}\n${GITHUB_REPOSITORY}\nby ${GITHUB_ACTOR}\n────────────────────────────────\n${COMMITS}\n────────────────────────────────\nCompare: ${COMPARE_URL}"
-
           curl -X POST -H "Content-Type: application/json" \
           -d "{
             \"attachments\": [
               {
-                \"color\": \"#34A853\",
-                \"title\": \"Frontend Push\",
-                \"text\": \"${MESSAGE}\"
+                \"color\": \"#4CAF50\",
+                \"title\": \"[FRONT] Push • ${GITHUB_REF_NAME}\",
+                \"text\": \"작성자: ${GITHUB_ACTOR}\n레포: ${GITHUB_REPOSITORY}\n\n${COMMIT_LIST}\n\nCompare → ${COMPARE_URL}\"
               }
             ]
           }" \
