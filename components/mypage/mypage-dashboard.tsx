@@ -21,6 +21,7 @@ import {
   CheckCircle2,
   AlertCircle,
   Loader2,
+  Ticket,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -191,6 +192,15 @@ export function MyPageDashboard() {
                   >
                     <CreditCard className="w-4 h-4" />
                     결제 내역
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("coupons")}
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                      activeTab === "coupons" ? "bg-primary text-primary-foreground" : "hover:bg-muted"
+                    }`}
+                  >
+                    <Ticket className="w-4 h-4" />
+                    내 쿠폰
                   </button>
                   <button
                     onClick={() => setActiveTab("profile")}
@@ -431,6 +441,115 @@ export function MyPageDashboard() {
                   </div>
                 </CardContent>
               </Card>
+            )}
+
+            {/* Coupons Tab */}
+            {activeTab === "coupons" && (
+              <div className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>내 쿠폰</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-4">
+                      {/* Available Coupons */}
+                      <div>
+                        <h3 className="text-lg font-semibold mb-4 text-foreground">사용 가능한 쿠폰</h3>
+                        <div className="space-y-3">
+                          <div className="border-2 border-primary rounded-lg p-4 bg-primary/5">
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <Ticket className="w-5 h-5 text-primary" />
+                                  <h4 className="font-bold text-foreground">신규 회원 10% 할인</h4>
+                                  <Badge className="bg-green-100 text-green-700 border-0">사용 가능</Badge>
+                                </div>
+                                <code className="block mb-2 px-3 py-1 bg-background rounded-md font-mono text-sm font-bold">
+                                  WELCOME10
+                                </code>
+                                <p className="text-sm text-muted-foreground mb-1">
+                                  5만원 이상 구매 시 10% 할인 (최대 2만원)
+                                </p>
+                                <p className="text-xs text-muted-foreground">유효기간: 2025-12-31까지</p>
+                              </div>
+                              <Button size="sm" variant="outline">
+                                복사
+                              </Button>
+                            </div>
+                          </div>
+
+                          <div className="border border-border rounded-lg p-4 bg-muted/30">
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <Ticket className="w-5 h-5 text-muted-foreground" />
+                                  <h4 className="font-bold text-foreground">여름 시즌 5,000원 할인</h4>
+                                  <Badge className="bg-green-100 text-green-700 border-0">사용 가능</Badge>
+                                </div>
+                                <code className="block mb-2 px-3 py-1 bg-background rounded-md font-mono text-sm font-bold">
+                                  SUMMER5000
+                                </code>
+                                <p className="text-sm text-muted-foreground mb-1">
+                                  10만원 이상 구매 시 5,000원 할인
+                                </p>
+                                <p className="text-xs text-muted-foreground">유효기간: 2025-08-31까지</p>
+                              </div>
+                              <Button size="sm" variant="outline">
+                                복사
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Used/Expired Coupons */}
+                      <div className="pt-6 border-t border-border">
+                        <h3 className="text-lg font-semibold mb-4 text-foreground">사용 완료 / 만료된 쿠폰</h3>
+                        <div className="space-y-3">
+                          <div className="border border-border rounded-lg p-4 bg-muted/20 opacity-60">
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <Ticket className="w-5 h-5 text-muted-foreground" />
+                                  <h4 className="font-bold text-foreground line-through">첫 예약 30,000원 할인</h4>
+                                  <Badge className="bg-gray-100 text-gray-700 border-0">만료</Badge>
+                                </div>
+                                <code className="block mb-2 px-3 py-1 bg-background rounded-md font-mono text-sm font-bold text-muted-foreground">
+                                  FIRST30000
+                                </code>
+                                <p className="text-sm text-muted-foreground mb-1">
+                                  15만원 이상 구매 시 30,000원 할인
+                                </p>
+                                <p className="text-xs text-muted-foreground">유효기간: 2025-03-31까지 (만료)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Coupon Input Section */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>쿠폰 코드 입력</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        placeholder="쿠폰 코드를 입력하세요"
+                        className="flex-1 px-4 py-3 rounded-lg border border-input bg-background focus:ring-2 focus:ring-primary focus:border-transparent uppercase"
+                      />
+                      <Button>등록</Button>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      관리자가 발급한 쿠폰 코드를 입력하여 쿠폰을 받을 수 있습니다.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             )}
 
             {/* Profile Tab */}

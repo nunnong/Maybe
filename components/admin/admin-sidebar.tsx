@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Heart, LayoutDashboard, Users, Home, MessageSquare, LogOut } from "lucide-react"
+import { Heart, LayoutDashboard, Users, Home, MessageSquare, LogOut, Ticket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface AdminSidebarProps {
@@ -13,6 +13,7 @@ const menuItems = [
   { id: "overview", label: "대시보드", icon: LayoutDashboard },
   { id: "dating", label: "소개팅 신청", icon: Users },
   { id: "pension", label: "펜션 예약", icon: Home },
+  { id: "coupons", label: "쿠폰 발급", icon: Ticket },
   { id: "inquiries", label: "1:1 문의", icon: MessageSquare },
 ]
 
